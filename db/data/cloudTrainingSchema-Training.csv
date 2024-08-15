@@ -1,0 +1,5 @@
+ID,description,totalHours,unit,price,currency
+1,ABAP,160,HOURS,1000,USD
+2,Fiori,120,HOURS,2000,USD
+3,SAPUI5,240,HOURS,2500,USD
+4,SAP CAP,180,HOURS,3000,USD
