@@ -9,9 +9,19 @@ namespace cloudTrainingSchema;
 //         gender : String
 // }
 
-define type name : String(50);
-       type lastName : String(50);
-       
+// Custom types
+define type name    : String(50);
+type lastName       : String(50);
+
+// Structured types
+define type address : {
+    street     : String;
+    city       : String;
+    state      : String(2);
+    postalCode : String(5);
+    country    : String(3)
+}
+
 
 // Persistent entities, local or database
 entity Trainee {
@@ -19,7 +29,8 @@ entity Trainee {
         name     : name;
         lastName : lastName;
         age      : Integer;
-        gender   : String
+        gender   : String;
+        address  : address
 }
 
 entity Training {
@@ -36,7 +47,14 @@ entity Trainer {
         name     : name;
         lastName : lastName;
         age      : Integer;
-        gender   : String
+        gender   : String;
+        address  : {
+            street     : String;
+            city       : String;
+            state      : String(2);
+            postalCode : String(5);
+            country    : String(3)
+        }
 }
 
 entity Coursing {
