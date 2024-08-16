@@ -9,11 +9,15 @@ namespace cloudTrainingSchema;
 //         gender : String
 // }
 
+define type name : String(50);
+       type lastName : String(50);
+       
+
 // Persistent entities, local or database
 entity Trainee {
     key ID       : Integer;
-        name     : String;
-        lastName : String;
+        name     : name;
+        lastName : lastName;
         age      : Integer;
         gender   : String
 }
@@ -29,8 +33,8 @@ entity Training {
 
 entity Trainer {
     key ID       : Integer;
-        name     : String;
-        lastName : String;
+        name     : name;
+        lastName : lastName;
         age      : Integer;
         gender   : String
 }
